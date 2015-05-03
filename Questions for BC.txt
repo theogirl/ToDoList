@@ -1,0 +1,3 @@
+Questions for BC:
+
+- what extra css info to use on every site that we make? e.g. "normalize.css" that was included with Streetfighter, or the content we used in Unit 1 (box sizing, global resets, etc.)
