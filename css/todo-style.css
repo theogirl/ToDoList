@@ -72,31 +72,116 @@ html {
 
 
 .wrapper {
-
+	margin: 0;
+	padding: 0;
+	background-color: pink;
 }
 
-.content {
-
-
+header {
+	background-color: black;
+	color: white;
+	height: 3em;
+	padding: 10px;
+	text-align: center;
 }
-
 
 .main {
-	max-width: 800px;
-	background-color: grey;
+	max-width: 500px;
+	margin: 0 auto;
+	background-color: white;
+	border: 1px solid blue;	
+	padding: 20px;
+}
+
+footer {
+	text-align: center;
+	background-color: black;
+	color: white;
+}
+
+.item-entry {
+	text-align: center;
+}
+.item-entry h1 {
+	font-size: 1.5em;
+	margin: 10px 0;
+}
+
+.item-entry input {
+
+	width: 380px;
+	height: 50px;
+	border: 1px solid deeppink;
+	padding: 20px;
+	font-size: 0.9em;
+	text-align: center;
+	margin-top: 20px;
+}
+
+.btn-enter {
+	background-color: deeppink;
+	padding: 20px 10px 17px 10px;
+	border: none;
+	color: white;
+	cursor: pointer;
+}
+
+.list ul {
+	margin-left: 0;
+	padding-left: 0;
 
 }
 
+.list li {
+	
+	list-style-type: none;
+	margin-left: 0;
+}
 
+.todos {
+	background-color: pink;
+	margin-top: 20px;
+	border: 1px solid black;
+	padding: 10px;
+	max-width: 500px;
+	color:black;
+}
 
+.todos button {
+	background-color: red;
+	padding: 15px;
+	border: none;
+	color:white;
+	margin-right: 15px;
+	width: 100px;
+	cursor: pointer;
+}
 
+.delete {
+	display: inline;
+	color: red;
+	font-size: 0.8em;
+	text-align: right;
+	float: right;
+	margin-top: 15px;
+	cursor: pointer;
+}
 
+.extras {
+	margin-top: 20px;
+	text-align: center;
+}
 
-
-
-
-
-
+button.reset {
+	background-color: deeppink;
+	height: 40px;
+	padding: 10px;
+	border: none;
+	color: white;
+	cursor: pointer;
+	width: 420px;
+	margin: 0 auto;
+}
 
 
 
