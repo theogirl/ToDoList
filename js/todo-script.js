@@ -3,6 +3,7 @@ $(document).ready(function() {
 // User enters text in input field and presses keyboard Return
 
 	$('input').focus();
+	$('.reset').hide();
 
 	$('input').keydown(function(event) {
 		if (event.which == 13) {
@@ -14,6 +15,7 @@ $(document).ready(function() {
 			$('.list ul').append("<li class='todos'>" + "<button><i class='fa fa-circle-o'></i></button>" + ' ' + value + "<div class='delete'>" + "<i class='fa fa-trash-o'></i>" + "</div>" + "</li>");
 			$(this).val(''); //passes an empty string to input field
 			$(this).focus(); //returns the focus to this field
+			$('.reset').show();
 			}
 		}
 	}) // end keydown on input
@@ -61,6 +63,30 @@ $(document).ready(function() {
 
 	$('.reset').click(function() {
 		$('.list ul').children().remove();
+		$(this).hide();
 	}) // end reset
+
+	$('.reset').mouseover(function() {
+		$(this).css('background-color', 'rgba(0,0,0,0.7)');
+	})
+
+	$('.reset').mouseout(function() {
+		$(this).css('background-color', 'rgba(0,0,0,0.3)');
+	})
+
+
+// Theme buttons
+
+	$('.food').click(function() {
+		$('.wrapper').css('background-image', 'url(images/fruit.jpg)');
+		$('.list-name h1').text('STUFF TO EAT');
+		$('p.icon').html('<i class="fa fa-cutlery"></i>');
+	}) // end click on Food theme button
+
+	$('.read').click(function() {
+		$('.wrapper').css('background-image', 'url(images/read.jpg)');
+		$('.list-name h1').text('STUFF TO READ');
+		$('p.icon').html('<i class="fa fa-bookmark-o"></i>');
+	}) // end click on Books theme button
 
 }); // end document ready

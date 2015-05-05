@@ -95,13 +95,14 @@ header {
 	width: 500px;
 	min-height: 600px;
 	margin: 0 auto;
-	background-color: rgba(0,0,0, 0.2);
+	background-color: rgba(0,0,0, 0.3);
 	padding: 20px 0;
 }
 
 
 .list-name {
 	text-align: center;
+	color: white;
 }
 
 .list-name h1 {
@@ -163,7 +164,7 @@ p.icon {
 /*----Styling for the dynamically generated list items----*/
 
 .todos {
-	background-color: rgba(0,0,0,0.5);
+	background-color: rgba(0,0,0,0.6);
 	width: 500px;
 	color:white;
 	height: 51px;
@@ -199,20 +200,47 @@ p.icon {
 	padding-top: 10px;
 }
 
+/*--Styles for the customization buttons--*/
+
 .extras {
-	margin-top: 20px;
+	margin-top: 30px;
 	text-align: center;
+	width: 100%;
+	color: white;
 }
 
-button.reset {
-	background-color: deeppink;
-	height: 40px;
-	padding: 10px;
-	border: none;
+.extras p {
+	font-size: 1.5em;
+	margin-bottom: 20px;
+}
+
+button.activity,
+button.food,
+button.shopping,
+button.read,
+button.relax {
+	height: 80px;
+	padding: 20px;
+	border: 1px solid grey;
 	color: white;
 	cursor: pointer;
-	width: 420px;
-	margin: 0 auto;
+	width: 80px;
+	display: inline;
+	margin: 10px 3px;
+	background-color: #222222;
+	font-size: 0.9em;
+}
+
+
+button.reset {
+	width: 100%;
+	height: 40px;
+	color: red;
+	background-color: rgba(0,0,0,0.3);
+	font-size: 1em;
+	margin-bottom: 35px;
+	border: 1px solid red;
+	cursor: pointer;
 }
 
 
