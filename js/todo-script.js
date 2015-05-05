@@ -11,7 +11,7 @@ $(document).ready(function() {
 				alert('Please enter a list item!');
 			}
 			else {
-			$('.list ul').append("<li class='todos'>" + "<button>Not Done</button>" + ' ' + value + "<div class='delete'>" + "<i class='fa fa-trash-o'></i>" + "</div>" + "</li>");
+			$('.list ul').append("<li class='todos'>" + "<button><i class='fa fa-circle-o'></i></button>" + ' ' + value + "<div class='delete'>" + "<i class='fa fa-trash-o'></i>" + "</div>" + "</li>");
 			$(this).val(''); //passes an empty string to input field
 			$(this).focus(); //returns the focus to this field
 			}
@@ -26,7 +26,7 @@ $(document).ready(function() {
 			alert('Please enter a list item!');
 		}
 		else {
-		$('.list ul').append("<li class='todos'>" + "<button>Not Done</button>" + ' ' + value + "<div class='delete'>" + "<i class='fa fa-trash-o'></i>" + "</div>" + "</li>");
+		$('.list ul').append("<li class='todos'>" + "<button><i class='fa fa-circle-o'></i></button>" + ' ' + value + "<div class='delete'>" + "<i class='fa fa-trash-o'></i>" + "</div>" + "</li>");
 		$('input').val(''); //passes an empty string to input field
 		$('input').focus(); //returns the focus to this field
 		}
@@ -37,14 +37,14 @@ $(document).ready(function() {
 	$('ul').on('click', 'button', function() {
 		if ($(this).hasClass('done')) {
 			$(this).parent('.todos').css('text-decoration', 'none');
-			$(this).css('background-color', 'red');
-			$(this).text('Not Done');
+			$(this).css('background-color', 'grey');
+			$(this).html('<i class="fa fa-circle-o"></i>');
 			$(this).removeClass('done');
 		}
 		else {
 		$(this).parent('.todos').css('text-decoration', 'line-through');
 		$(this).css('background-color', 'green');
-		$(this).text('Done');
+		$(this).html('<i class="fa fa-check-circle"></i>');
 		$(this).addClass('done');
 		}
 	}) // end on click of Done button

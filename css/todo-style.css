@@ -124,14 +124,14 @@ p.icon {
 	width: 450px;
 	height: 50px;
 	padding: 20px;
-	font-size: 0.9em;
+	font-size: 1em;
 	text-align: center;
 	margin: 20px 0;
 	float: left;
 }
 
 .btn-add {
-	background-color: deeppink;
+	background-color: red;
 	width: 50px;
 	height: 50px;
 	border: none;
@@ -159,26 +159,32 @@ p.icon {
 	margin-left: 0;
 }
 
+
+/*----Styling for the dynamically generated list items----*/
+
 .todos {
-	background-color: rgba(0,0,0, 0.9);
-	padding: 10px;
+	background-color: rgba(0,0,0,0.5);
 	width: 500px;
 	color:white;
-	height: 60px;
+	height: 51px;
 	font-size: 1.2em;
 	border-bottom: 1px solid white;
+	padding: 0;
 }
 
+/*--the check-when-done button--*/
 .todos button {
-	background-color: red;
-	padding: 15px;
+	background-color: grey;
+	width: 50px;
+	height: 50px;
 	border: none;
 	color:white;
-	margin: 0;
-	width: 100px;
+	margin-right: 20px;
 	cursor: pointer;
+	font-size: 1.5em;
 }
 
+/*--the delete this list item button--*/
 .delete {
 	display: inline;
 	background-color: black;
@@ -188,10 +194,9 @@ p.icon {
 	color: white;
 	cursor: pointer;
 	float: right;
-	padding: 10px;
-	font-size: 0.8em;
+	font-size: 1.2em;
 	text-align: center;
-	font-size: 1.3em;
+	padding-top: 10px;
 }
 
 .extras {
