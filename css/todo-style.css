@@ -69,12 +69,18 @@ html {
 	-webkit-font-smoothing: antialiased;/*---this makes the fonts cleaner in Safari---*/
 }
 
+body {
+	font-family: 'Slabo 27px', serif;
+}
 
 
 .wrapper {
 	margin: 0;
 	padding: 0;
 	background-color: pink;
+	background-image: url(../images/wharf.jpg);
+	background-repeat: no-repeat;
+    background-size: cover;
 }
 
 header {
@@ -86,11 +92,11 @@ header {
 }
 
 .main {
-	max-width: 500px;
+	width: 500px;
+	min-height: 600px;
 	margin: 0 auto;
-	background-color: white;
-	border: 1px solid blue;	
-	padding: 20px;
+	background-color: rgba(0,0,0, 0.3);
+	padding: 20px 0;
 }
 
 footer {
@@ -102,28 +108,38 @@ footer {
 .item-entry {
 	text-align: center;
 }
+
+.inputs {
+	width: 500px;
+	padding:0;
+}
+
+
 .item-entry h1 {
-	font-size: 1.5em;
+	font-size: 2em;
 	margin: 10px 0;
 }
 
-.item-entry input {
+.inputs input {
 
-	width: 380px;
+	width: 450px;
 	height: 50px;
-	border: 1px solid deeppink;
 	padding: 20px;
 	font-size: 0.9em;
 	text-align: center;
-	margin-top: 20px;
+	margin: 20px 0;
+	float: left;
 }
 
-.btn-enter {
+.btn-add {
 	background-color: deeppink;
-	padding: 20px 10px 17px 10px;
+	width: 50px;
+	height: 50px;
 	border: none;
 	color: white;
 	cursor: pointer;
+	float: right;
+	margin: 20px 0;
 }
 
 .list ul {

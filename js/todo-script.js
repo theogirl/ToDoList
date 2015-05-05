@@ -18,7 +18,7 @@ $(document).ready(function() {
 
 // User enters text in input field and presses "Add" button
 
-	$('.btn-enter').click(function() {
+	$('.btn-add').click(function() {
 		var value = $('input').val();
 		if (value === '') {
 			alert('Please enter a list item!');
