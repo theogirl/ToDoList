@@ -5,6 +5,7 @@ $(document).ready(function() {
 	$('input').focus();
 	$('.reset').hide();
 
+
 	$('input').keydown(function(event) {
 		if (event.which == 13) {
 		var value = $(this).val();
@@ -31,6 +32,7 @@ $(document).ready(function() {
 		$('.list ul').append("<li class='todos'>" + "<button><i class='fa fa-circle-o'></i></button>" + ' ' + value + "<div class='delete'>" + "<i class='fa fa-trash-o'></i>" + "</div>" + "</li>");
 		$('input').val(''); //passes an empty string to input field
 		$('input').focus(); //returns the focus to this field
+		$('.reset').show();
 		}
 	})
 
@@ -67,18 +69,38 @@ $(document).ready(function() {
 	}) // end reset
 
 	$('.reset').mouseover(function() {
-		$(this).css('background-color', 'rgba(0,0,0,0.7)');
+		$(this).css('background-color', 'rgba(0,0,0,0.5)').css('color', 'white');
 	})
 
 	$('.reset').mouseout(function() {
-		$(this).css('background-color', 'rgba(0,0,0,0.3)');
+		$(this).css('background-color', 'rgba(0,0,0,0.1)').css('color', 'red');
 	})
 
 
 // Theme buttons
 
+
+    // change bgr color of theme buttons mouseover and out
+    $('.extras').on('mouseover', 'button', function() {
+    	$(this).css('background-color', 'red');
+    })
+
+    $('.extras').on('mouseout', 'button', function() {
+    	$(this).css('background-color', 'black');
+    })
+
+    $('.extras').on('focus', 'button', function() {
+    	$(this).css('border', '2px solid white');
+    })
+
+     $('.extras').on('blur', 'button', function() {
+    	$(this).css('border', '1px solid grey');
+    })
+
+
+
 	$('.food').click(function() {
-		$('.wrapper').css('background-image', 'url(images/fruit.jpg)');
+		$('.wrapper').css('background-image', 'url(images/food.jpg)');
 		$('.list-name h1').text('STUFF TO EAT');
 		$('p.icon').html('<i class="fa fa-cutlery"></i>');
 	}) // end click on Food theme button
@@ -88,5 +110,29 @@ $(document).ready(function() {
 		$('.list-name h1').text('STUFF TO READ');
 		$('p.icon').html('<i class="fa fa-bookmark-o"></i>');
 	}) // end click on Books theme button
+   
+
+	$('.tasks').click(function() {
+		$('.wrapper').css('background-image', 'url(images/desk.jpg)');
+		$('.list-name h1').text('STUFF TO DO');
+		$('p.icon').html('<i class="fa fa-check"></i>');
+	}) // end click on Books theme button
+
+	$('.notes').click(function() {
+		$('.wrapper').css('background-image', 'url(images/music.jpg)');
+		$('.list-name h1').text('STUFF TO PLAY');
+		$('p.icon').html('<i class="fa fa-volume-up"></i>');
+	}) // end click on Books theme button
+
+	$('.travel').click(function() {
+		$('.wrapper').css('background-image', 'url(images/travel.jpg)');
+		$('.list-name h1').text('STUFF TO SEE');
+		$('p.icon').html('<i class="fa fa-globe"></i>');
+	}) // end click on Books theme button
+
+
+
+
 
 }); // end document ready
+

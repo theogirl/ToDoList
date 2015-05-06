@@ -71,14 +71,15 @@ html {
 
 body {
 	font-family: 'Slabo 27px', serif;
+	background-color: black;
 }
 
 
 .wrapper {
 	margin: 0;
 	padding: 0;
-	background-color: pink;
-	background-image: url(../images/wharf.jpg);
+	background-color: black;
+	background-image: url(../images/desk.jpg);
 	background-repeat: no-repeat;
     background-size: cover;
 }
@@ -91,18 +92,24 @@ header {
 	text-align: center;
 }
 
+header img {
+	width: 150px;
+}
+
 .main {
-	width: 500px;
-	min-height: 600px;
+	width: 600px;
+	min-height: 700px;
 	margin: 0 auto;
 	background-color: rgba(0,0,0, 0.3);
 	padding: 20px 0;
 }
 
 
+
 .list-name {
 	text-align: center;
 	color: white;
+	width: 100%;
 }
 
 .list-name h1 {
@@ -116,16 +123,16 @@ p.icon {
 }
 
 .inputs {
-	width: 500px;
+	width: 100%;
 	padding:0;
 }
 
 .inputs input {
 
-	width: 450px;
+	width: 91.67%;
 	height: 50px;
 	padding: 20px;
-	font-size: 1em;
+	font-size: 1.2em;
 	text-align: center;
 	margin: 20px 0;
 	float: left;
@@ -133,7 +140,7 @@ p.icon {
 
 .btn-add {
 	background-color: red;
-	width: 50px;
+	width: 8.33%;
 	height: 50px;
 	border: none;
 	color: white;
@@ -144,7 +151,8 @@ p.icon {
 }
 
 .list {
-	margin-top: 20px;
+	width: 100%;
+	margin: 20px auto;
 	clear: both;
 }
 
@@ -165,7 +173,7 @@ p.icon {
 
 .todos {
 	background-color: rgba(0,0,0,0.6);
-	width: 500px;
+	width: 100%;
 	color:white;
 	height: 51px;
 	font-size: 1.2em;
@@ -176,7 +184,7 @@ p.icon {
 /*--the check-when-done button--*/
 .todos button {
 	background-color: grey;
-	width: 50px;
+	width: 8.33%;
 	height: 50px;
 	border: none;
 	color:white;
@@ -189,7 +197,7 @@ p.icon {
 .delete {
 	display: inline;
 	background-color: black;
-	width: 50px;
+	width: 8.33%;
 	height: 50px;
 	border: none;
 	color: white;
@@ -214,33 +222,36 @@ p.icon {
 	margin-bottom: 20px;
 }
 
-button.activity,
+button.notes,
 button.food,
-button.shopping,
+button.travel,
 button.read,
-button.relax {
-	height: 80px;
+button.tasks {
+	height: 90px;
 	padding: 20px;
-	border: 1px solid grey;
+	border: 2px solid grey;
 	color: white;
 	cursor: pointer;
-	width: 80px;
+	width: 90px;
 	display: inline;
-	margin: 10px 3px;
+	margin: 10px 2px;
 	background-color: #222222;
-	font-size: 0.9em;
+	font-size: 0.8em;
+	text-align: center;
 }
 
 
-button.reset {
+div.reset {
 	width: 100%;
 	height: 40px;
 	color: red;
-	background-color: rgba(0,0,0,0.3);
-	font-size: 1em;
+	font-size: 1.2em;
+	font-family: Arial, serif;
 	margin-bottom: 35px;
 	border: 1px solid red;
 	cursor: pointer;
+	padding-top: 10px;
+	background-color: rgba(0,0,0,0.1);
 }
 
 
@@ -250,13 +261,43 @@ footer {
 	background-color: black;
 	color: white;
 	height: 50px;
-	padding-top: 15px;
+	padding-top: 25px;
 	font-family: Arial, sans-serif;
 	font-size: 0.8em;
 }
 
 
+/*------MOBILE STYLES----*/
 
+@media only screen and (max-width: 600px) {
+	.main {
+		width: 100%;
+	}
+	.inputs input {
+		width: 88%;
+	}
+	.todos button,
+	.delete,
+	.btn-add {
+		width: 12%;
+	}
+	.extras p {
+		padding: 0 30px;
+	}
+	footer {
+		padding: 20px;
+
+	}
+
+	button.notes,
+	button.food,
+	button.travel,
+	button.read,
+	button.tasks {
+		margin: 5px;
+		height: 100px;
+		width: 100px;
+}
 
 
 
